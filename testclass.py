@@ -53,10 +53,16 @@ class Duree:
 
     def __radd__(self, secondes):
         return self + secondes
+    
+    def __iadd__(self, secondes):
+        return self + secondes
 
 dure1 = Duree(1,20)
 print(dure1)
 print(dure1 + 3660)
-print(2 + dure1)
+print("test inversion of +",2 + dure1)
+dure1 += 10
+print(dure1)
+
 
 ####################
